@@ -1,7 +1,7 @@
 name: Metrics
 on:
   # Schedule updates (each hour)
-  schedule: [{cron: "0 * * * *"}]
+  schedule: [{cron: "30 5 * * *"}]
   # Lines below let you run workflow manually and on each commit (optional)
   workflow_dispatch:
   push: {branches: ["master", "main"]}
@@ -14,3 +14,12 @@ jobs:
         with:
           # Your GitHub token
           token: ${{ secrets.METRICS_TOKEN }}
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: half-year # Display full year instead of half year
+          template: repository
+          user: repository-owner
+          repo: repository-name
+          plugin_licenses: yes
+          plugin_licenses_setup: npm ci       # Command to setup target repository
+          plugin_licenses_ratio: no           # Display used licenses ratio
+          plugin_licenses_legal: yes          # Display permissions, limitations and conditions
