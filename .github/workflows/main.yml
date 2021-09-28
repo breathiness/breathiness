@@ -10,9 +10,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # See action.yml for all options
-      - uses: lowlighter/metrics@latest
+      - name: 📅 Isocalendar plugin (half year)
+        if: ${{ success() || failure() }}
+        uses: lowlighter/metrics@master
         with:
-          # Your GitHub token
+          filename: metrics.plugin.isocalendar.svg
           token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
           plugin_isocalendar: yes
-          plugin_isocalendar_duration: half-year # Display full year instead of half year
+          plugins_errors_fatal: ${{ github.repository == 'lowlighter/lowlighter' }}
+          output_action: pull-request
+          delay: 120
+
+      - name: 🙋 Introduction (repository)
+        if: ${{ success() || failure() }}
+        uses: lowlighter/metrics@master
+        with:
+          filename: metrics.plugin.introduction.repository.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          template: repository
+          repo: dotfile
+          base: header
+          plugin_introduction: yes
+          plugins_errors_fatal: ${{ github.repository == 'lowlighter/lowlighter' }}
+          output_action: pull-request
+          delay: 120
