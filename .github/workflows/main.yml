@@ -1,0 +1,31 @@
+name: Metrics
+on:
+  # Schedule updates (each hour)
+  schedule: [{cron: "30 5 * * *"}]
+  # Lines below let you run workflow manually and on each commit (optional)
+  workflow_dispatch:
+  push: {branches: ["master", "main"]}
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      # See action.yml for all options
+      - name: 📅 Isocalendar plugin (half year)
+        if: ${{ success() || failure() }}
+        uses: lowlighter/metrics@master
+        with:
+          filename: metrics.plugin.isocalendar.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_isocalendar: yes
+          delay: 120
+
+      - name: 🌟 Recently starred repositories
+        if: ${{ success() || failure() }}
+        uses: lowlighter/metrics@master
+        with:
+          filename: metrics.plugin.stars.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""
+          plugin_stars: yes
+          plugin_stars_limit: 2
