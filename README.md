@@ -6,7 +6,7 @@
 
 ----
 
-[![📅 Isocalendar plugin (half year)](https://cdn.jsdelivr.net/gh/breathiness/breathiness@main/metrics.plugin.isocalendar.svg)](https://github.com/breathiness?tab=repositories) | [![🌟 Recently starred repositories](https://cdn.jsdelivr.net/gh/breathiness/breathiness@main/metrics.plugin.stars.svg)](https://github.com/breathiness?tab=stars)
+[![📅 Isocalendar plugin (half year)](https://github.com/breathiness/breathiness/raw/main/metrics.plugin.isocalendar.svg)](https://github.com/breathiness?tab=repositories) | [![🌟 Recently starred repositories](https://github.com/breathiness/breathiness/raw/main/metrics.plugin.stars.svg)](https://github.com/breathiness?tab=stars)
 ---|---
 
 ![github4life](https://github4life.herokuapp.com/breathiness.gif)
