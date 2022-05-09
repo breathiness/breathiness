@@ -14,3 +14,5 @@
 ---|---
 
 ![github4life](https://github4life.herokuapp.com/breathiness.gif)
+
+![Moe Counter](https://count.getloli.com/get/@breathiness?theme=rule34)
