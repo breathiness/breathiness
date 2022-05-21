@@ -15,4 +15,4 @@
 
 ![github4life](https://github4life.herokuapp.com/breathiness.gif)
 
-![Moe Counter](https://count.getloli.com/get/@breathiness)
+<img src="https://count.getloli.com/get/@breathiness" alt="Moe Counter" />
